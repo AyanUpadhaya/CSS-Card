@@ -1,0 +1,90 @@
+body {
+    display: grid;
+    place-items: center;
+    font-family: sans-serif;
+    height: 100vh;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.card {
+    width: 40%;
+    position: relative;
+    box-shadow: 0 0 25px 2px rgba(110, 34, 34, 0.35);
+}
+
+.card::before,
+.card::after{
+    content: '';
+    position: absolute;
+    border: 1px solid white;
+}
+
+.card::before{
+    top: 1.5rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+.card::after{
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+}
+
+.card__item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.card__body {
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    padding: 3rem;
+}
+
+.card__title,
+.card__text {
+    margin: 0;
+}
+
+.card__title {
+    font-size: 2.2rem;
+    font-family: "Ubuntu",Arial,sans-serif;
+    line-height: 1;
+    margin-bottom: .5rem;
+    position: relative;
+    z-index: 1;
+    color: black;
+
+}
+
+.card__title::before{
+    content: '';
+    position: absolute;
+    background: yellow;
+    width: calc(100% + 5rem);
+    top: -.1rem;
+    bottom: -.15em;
+    left: -5rem;
+    z-index: -1;
+    box-shadow: inset -15px 0 10px -10px rgba(0,0,0,.5);
+}
+
+.card__title::after{
+    content: '';
+    position: absolute;
+    bottom: -.15em;
+    left: calc(100% + 3rem);
+    top: -.1rem;
+    width: 3rem;
+    background-color: yellow;
+    box-shadow: inset 14px 0 10px -10px rgba(0,0,0,.5);
+    
+}
+.card .card__text{
+    text-align: right;
+    /* font-weight: bold; */
+}
